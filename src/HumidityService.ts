@@ -52,7 +52,6 @@ export class HumidityService {
       .withConverter(converter)
       .onSnapshot((snapshot) => {
         Object.assign(this.latest, snapshot.docs[0].data());
-        console.log(this.latest);
       });
     this.unsubscribers.push(unsub);
   }

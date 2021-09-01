@@ -3,7 +3,9 @@
     <conditions-card
       v-if="temperatureService.latest.isValid && humidityService.latest.isValid"
       v-bind:temperature="temperatureService.latest.temperature"
+      v-bind:temperature-timestamp="temperatureService.latest.timestamp"
       v-bind:humidity="humidityService.latest.humidity"
+      v-bind:humidity-timestamp="humidityService.latest.timestamp"
     ></conditions-card>
   </div>
 </template>
